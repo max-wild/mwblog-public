@@ -1,0 +1,20 @@
+<div class="blog_content_portion">
+
+    <select name="portion_type" class="portion_type" 
+            {{#if type}}data-loaded_value="{{type}}"{{/if}}>
+        <option value="text">Text</option>
+        <option value="divider">Divider</option>
+        <option value="image">Image</option>
+        <option value="yt_link">YT Link</option>
+        <option value="audio">Audio</option>
+    </select>
+
+    <div class="portion_vert_divider"></div>
+
+    <textarea name="portion_filling" class="portion_filling">{{portion_content}}</textarea>
+
+    <div class="portion_vert_divider"></div>
+
+    <button class="portion_delete" type="button"><i class="las la-trash-alt"></i></button>
+
+</div>

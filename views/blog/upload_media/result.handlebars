@@ -1,0 +1,20 @@
+{{!-- This page is used to tell if uploading media was successful or not --}}
+
+<link rel="stylesheet" href="/css/crud.css">
+
+{{#if success}}
+
+    <h3 class="upload_file_header">Success! <i class="las la-laugh-beam"></i></h3>
+
+    <p>{{success}}</p>
+
+{{/if}}
+
+
+{{#if error}}
+
+    <h3 class="upload_file_header">Error! <i class="las la-frown-open"></i></h3>
+
+    <p>{{error}}</p>
+
+{{/if}}

@@ -1,0 +1,32 @@
+{{!-- This page is used to upload photo / audio files to be used in the blog --}}
+
+<link rel="stylesheet" href="/css/crud.css">
+
+<h3 class="upload_file_header">Show a file-select field which allows only one file to be chosen: </h3>
+
+<p>
+  Requirement: Try to make file names unique.
+  <br>
+  <br>
+  Tip: Don't RUSH a bunch of requests all at once, you may delete the current files by accident.
+  <br>
+  Tip: As it's currently implemented, you'll need to REMEMBER the names of uploaded files.
+</p>
+
+<form action="/blog/upload_media" enctype="multipart/form-data" method="POST">
+  
+
+  <div>
+    <label for="file_name">Picture name: </label>
+    <input required type="text" id="file_name" name="file_name">
+  </div>
+  
+  <div>
+    <label for="uploaded_file">Select a file: </label>
+    <input required type="file" id="uploaded_file" name="uploaded_file">
+  </div>
+  
+  <br><br>
+
+  <input type="submit">
+</form>

@@ -1,0 +1,52 @@
+{{!-- This page is used to tell the user what  --}}
+{{!-- Accessed by going to /blog/upload_media/YEAR, where specified year is used --}}
+
+<link rel="stylesheet" href="/css/crud.css">
+
+{{#if exists_filled}}
+
+    <h3 class="upload_file_header">Folder</h3> 
+    <p>{{filepath}}</p>
+    <h3 class="upload_file_header">has files in it <i class="las la-laugh-beam"></i>:</h3>
+
+    <p>
+
+        {{#each exists_filled}}
+            {{this}}
+            <br>
+        {{/each}}
+
+    </p>
+
+{{/if}}
+
+
+{{#if exists_empty}}
+
+    <h3 class="upload_file_header">Folder</h3> 
+    <p>{{filepath}}</p>
+    <h3 class="upload_file_header">exists but it is empty <i class="las la-laugh-beam"></i></h3>
+
+{{/if}}
+
+
+{{#if not_exists}}
+
+    <h3 class="upload_file_header">Folder</h3> 
+    <p>{{filepath}}</p>
+    <h3 class="upload_file_header">doesn't exist <i class="las la-frown-open"></i></h3>
+
+{{/if}}
+
+
+{{#if error}}
+
+    <h3 class="upload_file_header">Error! <i class="las la-frown-open"></i></h3>
+
+    <p>{{error}}</p>
+{{/if}}
+
+<p>
+    <br>
+    Remember... filepaths are only stored with the year.
+</p>

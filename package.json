@@ -1,0 +1,34 @@
+{
+  "name": "mwblog",
+  "version": "1.0.0",
+  "description": "Server for my first blog",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-sslify": "^1.2.0",
+    "handlebars": "^4.7.7",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "buildPortion": "handlebars views/partials/blog_content_portion.handlebars -f handlebars/blog_content_portion.js",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/max-wild/mwblog.git"
+  },
+  "author": "Max Wild",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/max-wild/mwblog/issues"
+  },
+  "homepage": "https://github.com/max-wild/mwblog#readme"
+}

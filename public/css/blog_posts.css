@@ -1,0 +1,257 @@
+/* 
+*
+All blog posts, blog posts formatted in blog boxes
+*
+*/
+
+#blog_all_content{
+
+    min-height: 1200px;
+    padding-top: 44px;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* background-color: aqua; */
+}
+
+#blog_all_content > p{
+
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+
+    font-family: 'Radio Canada';
+    color: var(--text-brown);
+}
+
+#blog_page_title{
+
+    width: 100%;
+    /* min-height: 116px; */
+    
+    margin: 0;
+    margin-bottom: 36px;
+}
+
+#blog_page_title h2, #blog_post_title h3{
+
+    font-size: 38px;
+    text-align: left;
+    margin: 0;
+    padding: 0 40px;
+
+    font-family: 'Merienda';
+    color: var(--blog-page-title);
+    /* font-style: italic; */
+    font-weight: 800;
+
+    text-shadow: -1px 2px 3px rgba(250, 213, 66, 0.15),
+                 1px 2px 3px rgba(250, 213, 66, 0.15);
+}
+
+.blog_box{
+
+    width: 80%;
+    min-height: 200px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--blog-bg-body);
+    border-radius: 3px;
+
+    outline: 3px solid var(--blog-outline);
+}
+
+.blog_box_header{
+
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--blog-bg-header);
+    border-radius: 3px 3px 0 0;
+}
+
+.blog_box_header a, .blog_box_divider p{
+
+    margin: 0 20px;
+    font-family: 'Radio Canada';
+}
+
+.blog_box_header a{
+
+    font-weight: 600;
+
+    color: var(--text-blog-title);
+    text-decoration: none;
+}
+
+.blog_box_header a:hover{
+
+    text-decoration: underline;
+}
+
+.blog_box_header a:active{
+
+    color: white;
+    text-decoration: none;
+}
+
+.blog_box_divider{
+
+    width: 100%;
+    padding: 1px 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--blog-divider);
+    /* background-color: red;
+    outline: 1px solid green; */
+}
+
+.blog_box_divider p{
+
+    font-size: 14px;
+
+    margin-right: 20px;
+
+    color: var(--text-blog-header);
+}
+
+.blog_content_box{
+
+    width: 100%;
+
+    padding: 30px;
+}
+
+.blog_content_box p{
+
+    margin: 0;
+    padding: 0;
+    white-space: pre-line;
+
+    font-family: 'Radio Canada';
+    color: var(--text-blog-contents);
+}
+
+.blog_box_image_preview{
+
+    padding: 25px 0;  /*25 top-bottom, 0 left-right*/
+    margin: 0;
+
+    width: 100%;
+
+    background-color: var(--blog-bg-body-darker);
+
+    display: flex;
+    justify-content: center;
+}
+
+.blog_box_image_preview img{
+
+    display: inline-block;
+
+    padding: 0;
+    margin: 0;
+
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 
+*
+Single blog post
+*
+*/
+
+#blog_post{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#blog_anchor_return{
+
+    font-size: 16px;
+    margin: 40px auto;
+    padding: 0;
+
+    font-family: 'Times New Roman', Times, serif;  /* Update later */
+    color: var(--text-blog-title);
+    text-decoration: none;
+}
+
+#blog_anchor_return:hover{
+
+    text-decoration: underline;
+}
+
+#blog_post_title{
+
+    width: 100%;
+    
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+#blog_post_header{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#blog_post_header h4{
+
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: var(--text-blog-header);
+}
+
+#blog_post_contents{
+
+    width: 80%;
+
+    margin: 20px 0;
+}
+
+#blog_post_contents p{
+
+    text-align: left;
+    white-space: pre-line;
+    line-height: 1.8;
+
+    font-size: 16px;
+    font-family: 'Radio Canada';
+    color: var(--text-blog-contents);
+}

@@ -1,0 +1,81 @@
+<div id="blog_post">
+
+    <a id="blog_anchor_return" href="/{{page_index}}">Back to Blog</a>
+
+    <div id="blog_post_title">
+
+        <h3>{{title}}</h3>
+    </div>
+
+    <div id="blog_post_header">
+
+        <h4>{{time_since_post}}</h4>
+        <h4>{{comment_count}} <i class="las la-comment-alt"></i></h4>
+        
+        {{#ifEquals word_count 1}}
+            <h4>{{word_count}} word</h4>
+        {{else}}
+            <h4>{{word_count}} words</h4>
+        {{/ifEquals}}
+
+        {{!-- Do an if statement check here!!! --}}
+        <button 
+                onclick="location.href='/blog/edit/{{_id}}';"
+                style="margin-left:40px;">Edit</button>
+        
+
+        <script>
+            function confirmHide(){
+                const yesHide = confirm('Are you sure you want to hide this?')
+                if(yesHide)
+                    document.hide_post.submit()
+            }
+        </script>
+
+        <form 
+                action="/blog/hide/{{_id}}?_method=PUT" 
+                method="POST"
+                name="hide_post"
+                style="margin-left:40px;"></form>
+        <button type="submit" onclick="confirmHide()">Hide</button>
+        
+        
+    </div>
+
+    <div id="blog_post_contents">
+
+        {{#each contents}}
+
+            {{#ifEquals this.type "text"}}
+                <p>{{this.portion_content}}</p>
+
+            {{else ifEquals this.type "divider"}}
+                <div style="background-color:red; height:4px; width:100%;"></div>
+
+            {{else ifEquals this.type "image"}}
+                {{#generateImage this.portion_content}}{{/generateImage}}
+
+            {{else ifEquals this.type "yt_link"}}
+                <iframe width="100%" src="{{this.portion_content}}" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+
+            {{else ifEquals this.type "audio"}}
+                <audio controls>
+                    <source src="{{this.portion_content}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+            {{/ifEquals}}
+
+        {{/each}}
+
+    </div>
+
+    <div id="post_comment_section">
+
+
+    </div>
+
+</div>

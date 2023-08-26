@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+        <title>Blog</title>
+
+        <link rel="stylesheet" href="/css/variables.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/blog_posts.css">
+
+        <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.ico">
+        <link rel="stylesheet" href="/media/line-awesome-1.3.0/css/line-awesome.min.css">
+
+        <script src="/scripts/parallax.js" charset="utf-8" defer></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Milonga&family=Radio+Canada:wght@400;600&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;600;800&family=Rubik+Puddles&display=swap" rel="stylesheet">
+
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+        {{!-- <link rel="preload" href="/media/graphics/main/unicef_logo_hover.png" />
+        <link rel="preload" href="/media/graphics/main/unicef_logo_active.png" /> --}}
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="background">
+
+            <div id="space" class="parallax_div"></div>
+            <div id="stars0" class="parallax_div"></div>
+            <div id="stars1" class="parallax_div"></div>
+        </div>
+
+        
+        <main>
+
+            <header>
+                <a id="title" href="/">maxwild.live</a>
+            </header>
+
+            <div class="header_divider"></div>
+
+            <nav>
+
+                <div id="nav_links">
+                    <a href="/">Blog</a>
+                    <a href="/ml_models">Something Fun</a>
+                    <a href="/games">Games</a>
+                    <a href="/about">About</a>
+                </div>
+
+            </nav>
+    
+            <div class="header_divider"></div>
+
+            
+            {{{body}}}
+                
+
+            <footer>
+                
+                <a href="https://www.unicefusa.org/?form=donate" target="_blank">Donate $1 to UNICEF?</a>
+                <a href="https://www.unicefusa.org/?form=donate" target="_blank"><img src="/media/graphics/main/unicef_transp.png"></a>
+
+                <!-- <i class="fa fa-smile-o" style="font-size:48px;color:red"></i> -->
+                <p><i class="las la-smile"></i> Max Wild 2023</p>
+            </footer>
+
+        </main>
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/crud.css">
+
+<div class="container">
+
+    <h3 id="crud_title">New Article</h1>
+
+    <label for="blog_field_title">Title</label>
+    <input required value="{{blog_field_title}}" type="text" id="blog_field_title">
+
+    <p>
+        Instructions for media formatting:
+        <br>
+        <br>
+        Requirement: all blog posts must have at least one picture/gif. Not testing for this.
+        <br>
+        <br>
+        (1) IMAGES: Upload to imgur, and then format as [{url} {explained} {width} {height}], so 
+        content would look like, for example, "https://i.imgur.com/8M5DIvG.jpeg 3200 2800". I 
+        considered adding a "default" but this is too messy for my interests
+        <br>
+        <br>
+        (2) YouTube Link: Set the URL from YT as the portion content. It MUST be
+        the "embedded" form of the video, acquired by hitting "share" on the YT video page.
+        <br>
+        <br>
+        (3) Audio: Set the URL from the audio as the portion, uploaded to somewhere public.
+    </p>
+
+
+    <div id="all_blog_contents">
+
+        {{> blog_content_portion}}
+
+        <button id="new_portion_button" type="button" onclick="addNewPortion()">+</button>
+
+        <!-- Here is where the NEW page is saved -->
+        <button id="post_new_blog" type="button" onclick="newPostBlogPortions()" class="share_post_button">
+            <i class="las la-share"></i> Post</button>
+    </div>
+
+
+    <!-- Load necessary front-end script for page-functioning -->
+    <script src="/scripts/handlebars.js"></script>
+    <script src="/scripts/form_fields.js" charset="utf-8"></script>
+
+
+    <!-- If the page is loaded with a save error, document that here -->
+    {{#if save_error}}
+        <script>
+            alert('Save error')
+        </script>
+        <h1>Server save error: {{save_error}}</h1>
+    {{/if}}
+
+</div>
