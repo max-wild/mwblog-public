@@ -17,25 +17,6 @@ const PORT = process.env.PORT || 3001
 var app = express()
 
 
-//*********************************
-// TODO section:
-// 
-
-
-// Todo: Make the edit save right!
-
-
-// Now-- need to make ACCESSING the database functionality:
-
-    // Making blog contents MORE than just text!!!
-        // i.e. image, text, divider, and YouTube video
-    // TODO: obfuscate everything
-
-    // Then... start logging in functionality
-        // Once this is done, it's ready to CONNECT WITH HEROKU!!! AHHHH!
-
-//*********************************
-//*********************************
 
 /**
 *    Setting up production / development environment
